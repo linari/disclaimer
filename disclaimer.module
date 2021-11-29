@@ -11,7 +11,9 @@ function disclaimer_help($path, $arg) {
       <li>Go to the <strong>Content Type</strong> where Disclaimer popup must be visible <strong>Manage fields</strong> settings</li>
       <li>Add <strong>Disclaimer field (field_disclaimer)</strong> that is already in existing fields list (make sure only Disclaimer nodes are referenced.)<br><em>By default Disclaimer field is already placed to <strong>Article</strong> Content Type</em></li>
       <li>Make sure the field is visible in Content type form (Manage form display)</li>
-      <li>Go to <strong>Manage display</strong> and set Disclaimer field Display settings to <strong>Rendered content -> Disclaimer Popup</strong>.<br><em>This will make Disclaimer node to work as a popup before the content is visible</em></li><li>Then <strong>create Disclaimer node</strong> content and include that node to the one you need using Disclaimer field</li>
+      <li>Go to <strong>Manage display</strong> and set Disclaimer field Display settings to <strong>Rendered content -> Disclaimer Popup</strong>.<br><em>This will make Disclaimer node to work as a popup before the content is visible</em></li>
+      <li>Then <strong>create Disclaimer node</strong> content and include that node to the one you need using Disclaimer field</li>
+      <li><strong>!Important:</strong>Do not delete field_disclaimer from Article Content type.</li>
       </ul>";
       return $content; 
       break; 
