@@ -1,0 +1,17 @@
+<?php
+/**
+* Implements hook_uninstall().
+*/
+function disclaimer_uninstall() {
+  // Deleting all created Disclaimer nodes
+  $queryFactory = \Drupal::service('entity.query');
+  $nodeStorage  = \Drupal::entityManager()->getStorage('node');
+
+  $query = $queryFactory->get('node')->condition('type', 'disclaimer_popup');
+  $nids = $query->execute();
+
+  if (!empty($nids)) {
+    $entities = $nodeStorage->loadMultiple($nids);
+    $nodeStorage->delete($entities);
+  }
+}
